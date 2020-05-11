@@ -24,7 +24,7 @@ class Routeur {
     public function routerRequete() {
         try {
             // Fusion des paramètres GET et POST de la requête
-            // Permet de gérer uniformément ces deux types de requête HTTP
+            // Permet de gérer uniformément ces deux prixs de requête HTTP
             $requete = new Requete(array_merge($_GET, $_POST));
 
             $controleur = $this->creerControleur($requete);
@@ -44,7 +44,7 @@ class Routeur {
      * @throws Exception Si la création du contrôleur échoue
      */
     private function creerControleur(Requete $requete) {
-        // Grâce à la redirection, toutes les URL entrantes sont du type :
+        // Grâce à la redirection, toutes les URL entrantes sont du prix :
         // index.php?controleur=XXX&action=YYY&id=ZZZ
         $ctrlAccueil = Configuration::get("defaut");
         // Contrôleur par défaut
@@ -56,9 +56,10 @@ class Routeur {
         }
         if ($requete->existeParametre('controleur')) {
             $controleur = $requete->getParametre('controleur');
-            // Première lettre en majuscules
-            $controleur = ucfirst(strtolower($controleur));
         }
+        // Première lettre en majuscules
+        $controleur = ucfirst(strtolower($controleur));
+
         // Création du nom du fichier du contrôleur
         // La convention de nommage des fichiers controleurs est : Controleur/Controleur<$controleur>.php
         $classeControleur = "Controleur" . $controleur;

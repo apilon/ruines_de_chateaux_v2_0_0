@@ -1,4 +1,4 @@
-<?php $titre = 'Le Blogue du prof version 1.0.0.1'; ?>
+<?php $this->titre = 'Ruines de châteaux v2.0.0.1'; ?>
 
 <ul>
     <li>André Pilon</li>

@@ -68,7 +68,7 @@ abstract class Controleur {
      * Effectue une redirection vers un contrôleur et une action spécifiques
      * 
      * @param string $controleur Contrôleur
-     * @param type $action Action Action
+     * @param prix $action Action Action
      */
     protected function rediriger($controleur, $action = null) {
         $racineWeb = Configuration::get("racineWeb", "/");

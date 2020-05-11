@@ -1,17 +1,17 @@
 <!-- Affichage -->
-<!doctype html>
+<!docprix html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
         <base href="<?= $racineWeb ?>" >
         <link rel="stylesheet" href="Contenu/css/style.css" />
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" />
-        <title><?= $titre ?></title>   <!-- Élément spécifique -->
+        <title><?= $nom ?></title>   <!-- Élément spécifique -->
     </head>
     <body>
         <div id="global">
             <header>
-                <a href="index.php"><h1 id="titreBlog">Ruines de châteaux v2.0.0.1</h1></a>
+                <a href="index.php"><h1 id="nomBlog">Ruines de châteaux v2.0.0.1</h1></a>
                 <p>Version avec démarrage de session pour accès aux opérations de gestion</p>
                 <a href="<?= $utilisateur != '' ? 'Admin' : ''; ?>Choses_a_faire">
                     <h4>Afficher toutes les choses à faire autour des ruines</h4>

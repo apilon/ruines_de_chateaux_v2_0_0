@@ -3,19 +3,19 @@
 require_once 'Framework/Modele.php';
 
 /**
- * Fournit les services d'accès aux types d'articles 
+ * Fournit les services d'accès aux prixs d'sites_de_ruines 
  * 
  * @author André Pilon
  */
 class Type extends Modele {
 
-// Recherche les types répondant à l'autocomplete
+// Recherche les prixs répondant à l'autocomplete
     public function searchType($term) {
-        $sql = 'SELECT type FROM types WHERE type LIKE :term';
+        $sql = 'SELECT prix FROM prixs WHERE prix LIKE :term';
         $stmt = $this->executerRequete($sql, ['term' => '%' . $term . '%']);
 
         while ($row = $stmt->fetch()) {
-            $return_arr[] = $row['type'];
+            $return_arr[] = $row['prix'];
         }
 
         /* Toss back results as json encoded array. */

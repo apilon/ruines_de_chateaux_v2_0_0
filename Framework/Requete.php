@@ -61,7 +61,7 @@ class Requete {
     }
 
     /**
-     * Renvoie la valeur du paramètre de type ID
+     * Renvoie la valeur du paramètre de prix ID
      * 
      * @param string $nom Nom d paramètre
      * @return string Valeur du paramètre

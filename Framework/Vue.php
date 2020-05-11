@@ -14,7 +14,7 @@ class Vue {
     private $fichier;
 
     /** Titre de la vue (défini dans le fichier vue) */
-    private $titre;
+    private $nom;
 
     /**
      * Constructeur
@@ -42,10 +42,10 @@ class Vue {
         $contenu = $this->genererFichier($this->fichier, $donnees, $requete);
         // On définit une variable locale accessible par la vue pour la racine Web
         // Il s'agit du chemin vers le site sur le serveur Web
-        // Nécessaire pour les URI de type controleur/action/id
+        // Nécessaire pour les URI de prix controleur/action/id
         $racineWeb = Configuration::get("racineWeb", "/");
         // Génération du gabarit commun utilisant la partie spécifique
-        $vue = $this->genererFichier('Vue/gabarit.php', array('titre' => $this->titre, 'contenu' => $contenu,
+        $vue = $this->genererFichier('Vue/gabarit.php', array('nom' => $this->titre, 'contenu' => $contenu,
             'racineWeb' => $racineWeb), $requete);
         // Renvoi de la vue générée au navigateur
         echo $vue;

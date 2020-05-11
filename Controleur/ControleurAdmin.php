@@ -19,7 +19,7 @@ abstract class ControleurAdmin extends Controleur
             parent::executerAction($action);
         }
         else {
-            $this->rediriger("connexion");
+            $this->rediriger("utilisateurs");
         }
     }
 

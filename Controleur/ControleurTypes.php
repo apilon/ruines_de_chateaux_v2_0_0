@@ -5,16 +5,16 @@ require_once 'Modele/Type.php';
 
 class ControleurTypes extends Controleur {
 
-    private $type;
+    private $prix;
 
     public function __construct() {
-        $this->type = new Type();
+        $this->prix = new Type();
     }
 
-// recherche et retourne les types pour l'autocomplete
+// recherche et retourne les prixs pour l'autocomplete
     public function index() {
         $term = $this->requete->getParametre('term');
-        echo $this->type->searchType($term);
+        echo $this->prix->searchType($term);
     }
 
 }
